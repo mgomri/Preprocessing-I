@@ -17,34 +17,94 @@
 
 
 <body>
-  <header>
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="#">Portfolio</a>
-      <a href="#">Contact</a>
-    </nav>
-    <div class="intro">
-      <img class="avatar" src="images/avatar.png" alt="balled person with glasses">
-      <div class="web-developper">
-        <h1>Mohamed Gomri</h1>
-        <p>Web Developper</p>
-        <button type="button">Let Me Help you</button>
-        
-      </div>
-    </div>
-  </header>
-  <hr>
-  <section class="skill-summary">
-   <h1>Education</h1>
-  <pre> 
-    University of Central Florida: Master's degree in statistics.
-                                                    Bachelor's degree in Mathematics.
-  </pre>
+  <div class="main-container">
+    <header>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Portfolio</a>
+        <a href="#">Contact</a>
+      </nav>
+      <div class="intro">
+        <img class="avatar" src="images/avatar.png" alt="balled person with glasses">
+        <div class="web-developper">
+          <h1>Mohamed Gomri-Web Developper</h1>
+          <p>
+            I am a team player who works efficiently to produce results in a timely manner.
+            <br>Call me a perfectionist, but I settle for no less than perfect.
+            <br>My Moto is "Acuracy with efficiency".
+          </p>
 
-  </section>
-  
- 
+          <button type="button">Try me out</button>
+
+        </div>
+      </div>
+    </header>
+    <hr>
+    <section class="skill-summary">
+      <div class="education">
+        <h1>Education</h1>
+        <table>
+          <tr>
+            <td>Lambda School:</td>
+            <td>Web developper certificate</td>
+          </tr>
+          <tr>
+            <td rowspan="2">University of Central Florida:</td>
+            <td>Master's degree in statistics</td>
+          </tr>
+          <tr>
+            <td>Bachelor's degree in Mathematics</td>
+          </tr>
+
+        </table>
+
+      </div>
+
+      <div class="work-history">
+        <h3>Work Experience</h3>
+        <table>
+          <tr>
+            <td>Senior Developper at App Crunch</td>
+            <td>2016-present</td>
+          </tr>
+          <tr>
+            <td>Senior Data Analyst</td>
+            <td>The Data Grinder</td>
+          </tr>
+        </table>
+      </div>
+    </section>
+    
+    <section class="contact">
+      <h1>Contact Me</h1>
+    <div class="form">
+      <form action="mailto:mohamed77gomri@yahoo.com" method="post" enctype="text/plain">
+        <div>
+          <label>Name</label><br>
+          <input type="text" name="yourName">
+        </div>
+        <br>
+        <div>
+          <label>Email</label><br>
+          <input type="email" name="yourEmail">
+        </div>
+        <br>
+        <div>
+          <label >message</label>
+            <br />
+            <br>
+          <textarea name="yourMessage" rows="10" cols="50"></textarea>
+        </div>
+        <br>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+    </section>
+    <section class="footer">
+
+    </section>
+  </div>
 </body>
 
 </html>
