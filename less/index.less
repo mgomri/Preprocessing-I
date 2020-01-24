@@ -4,56 +4,314 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin        : 0;
+	padding       : 0;
+	// border     : 0;
+	font-size     : 100%;
+	font          : inherit;
 	vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
 	display: block;
 }
+
 body {
 	line-height: 1;
 }
-ol, ul {
+
+ol,
+ul {
 	list-style: none;
 }
-blockquote, q {
+
+blockquote,
+q {
 	quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
 	content: '';
 	content: none;
 }
+
 table {
 	border-collapse: collapse;
-	border-spacing: 0;
+	border-spacing : 0;
 }
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
+html,
+body {
+	height: 100%;
+
 }
 
+//End of reset
+
+
+
+//variables
+
+@playfair: 'Playfair Display', serif;
+@lato    : 'Lato', sans-serif;
+@color1  : #B22222;
+@color2  : #66BFBF;
+
+//mixins
+
+.button-style1(){
+	display         : block;
+	margin          : auto;
+	width           : 12vw;
+	height          : 8vh;
+	border-radius   : 10px;
+	background-color: #32CD32;
+	color           : white;
+	border          : none;
+	font-family     : @lato;
+	font-size       : 1.2rem;
+}
+
+.button-style2(){
+	
+	width           : 8vw;
+	height          : 5vh;
+	border-radius   : 10px;
+	background-color: rgb(14, 8, 0);
+	color           : white;
+	border          : none;
+	font-family     : @lato;
+	font-size       : 1.2rem;
+}
+
+.centered(){
+	display:block;
+	margin:auto;
+}
+
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
+	color: @color1;
+}
+
+h1,
+h2,
+h3,
+p,
+pre {
+	line-height: 1.5;
+
+}
+
+.main-container {
+	.centered();
+	display       : flex;
+	flex-direction: column;
+	width: 90%;
+	@media(max-width:500px){
+		width:100%;
+	}
+
+
+	header {
+		background: #F0F8FF;
+		height    : 80vh;
+
+
+
+		nav {
+			width          : 40%;
+			display        : flex;
+			justify-content: space-evenly;
+			margin         : auto;
+
+
+			a {
+				text-decoration: none;
+				font-family    : @lato;
+				color          : @color1;
+				margin-top     : 3rem;
+
+			}
+
+			//end of anchor-tag.
+
+		}
+
+		//end of nav.
+
+		.intro {
+
+			display        : flex;
+			justify-content: space-evenly;
+			align-items    : stretch;
+			margin         : 12rem 0;
+
+
+			.avatar {
+				transform    : scale(1.5);
+				border-radius: 50%;
+			}
+
+			//end of avatar.
+
+			.web-developper {
+				font-family: @playfair;
+
+
+				p {
+					margin: 0 0 2rem 0;
+				}
+			}
+
+			button {
+				.button-style1();
+
+
+			}
+		}
+
+		//end of intro.	
+
+	}
+
+	//end of header
+
+	.skill-summary {
+
+
+		div {
+			margin-bottom: 3rem;
+		}
+
+		table {
+			width: 40%;
+
+
+			th,
+			td {
+				line-height: 3;
+			}//end of td
+
+		}//end of table
+	}//end of skill summary
+
+	.contact{
+		.form{
+			.centered();
+			button{
+				.button-style2();
+			}//end of button
+		}//end of form
+		
+
+	}//end of contact
+
+}//end of main

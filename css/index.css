@@ -1,1 +1,231 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
+  color: #B22222;
+}
+h1,
+h2,
+h3,
+p,
+pre {
+  line-height: 1.5;
+}
+.main-container {
+  display: block;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+@media (max-width: 500px) {
+  .main-container {
+    width: 100%;
+  }
+}
+.main-container header {
+  background: #F0F8FF;
+  height: 80vh;
+}
+.main-container header nav {
+  width: 40%;
+  display: flex;
+  justify-content: space-evenly;
+  margin: auto;
+}
+.main-container header nav a {
+  text-decoration: none;
+  font-family: 'Lato', sans-serif;
+  color: #B22222;
+  margin-top: 3rem;
+}
+.main-container header .intro {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: stretch;
+  margin: 12rem 0;
+}
+.main-container header .intro .avatar {
+  transform: scale(1.5);
+  border-radius: 50%;
+}
+.main-container header .intro .web-developper {
+  font-family: 'Playfair Display', serif;
+}
+.main-container header .intro .web-developper p {
+  margin: 0 0 2rem 0;
+}
+.main-container header .intro button {
+  display: block;
+  margin: auto;
+  width: 12vw;
+  height: 8vh;
+  border-radius: 10px;
+  background-color: #32CD32;
+  color: white;
+  border: none;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.2rem;
+}
+.main-container .skill-summary div {
+  margin-bottom: 3rem;
+}
+.main-container .skill-summary table {
+  width: 40%;
+}
+.main-container .skill-summary table th,
+.main-container .skill-summary table td {
+  line-height: 3;
+}
+.main-container .contact .form {
+  display: block;
+  margin: auto;
+}
+.main-container .contact .form button {
+  width: 8vw;
+  height: 5vh;
+  border-radius: 10px;
+  background-color: #0e0800;
+  color: white;
+  border: none;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.2rem;
+}
